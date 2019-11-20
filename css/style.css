@@ -1,0 +1,29 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+}
+
+
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+.label {
+    padding: 5px;
+}
+.form__input {
+    margin: 5px;
+}
+.form__button {
+    margin: 5px;
+}
+
+.text__clue {
+    padding-top: 10px;
+    margin: 5px;
+}
+.text__counter {
+    margin: 5px;
+}
