@@ -15,28 +15,37 @@ function getRandomNumber(max) {
 const randomNumber = getRandomNumber(100);
 console.log(randomNumber);
 
-//Necesito comparar el número introducido con el número generado, ya que en función de eso aparecerá un texto u otro.
+button.addEventListener('click', getRandomNumber);
+
+//Necesito comparar el número introducido con el número generado, ya que en función de eso aparecerá un mensaje u otro.
 
 function compareNumbers () {
     console.log('llamando');
-    if (inputNumber > 100) {
-        clue.innerHTML = "El número debe estar entre 1 y 100.";
+    if (inputNumber < randomNumber) {
+        clue.innerHTML = "El número es demasiado bajo.";
+    } 
+    else if (inputNumber > randomNumber) {
+        clue.innerHTML = "El número es demasiado alto.";
     }
     else if (inputNumber < 1) {
         clue.innerHTML = "El número debe estar entre 1 y 100.";
     }
-    else if (inputNumber > randomNumber) {
-        clue.innerHTML = "El número es demasiado alto.";
+    else if (inputNumber > 100) {
+        clue.innerHTML = "El número debe estar entre 1 y 100.";
     }
-    else if (inputNumber < randomNumber) {
-        clue.innerHTML = "El número es demasiado bajo.";
+    else {
+        clue.innerHTML = "¡¡¡Has ganado campeona!!!";
     }
-}
+};
 
 button.addEventListener('click', compareNumbers);
 
-//Hago la función contador para que me indique los intentos que me quedan
+//Hago la función contador para que me indique el número de intentos 
 
+function numberCounter (){
+    counter = counter + 1;
 
+    textCounter.innerHTML = `Número de intentos: ${counter}`;
+}
 
-button.addEventListener('click', getRandomNumber);
+button.addEventListener('click', numberCounter);
