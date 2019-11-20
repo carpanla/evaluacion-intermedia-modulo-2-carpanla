@@ -18,6 +18,8 @@
 }
 .form__button {
     margin: 5px;
+    background-color: goldenrod;
+    border-radius: 10px;
 }
 
 .text__clue {

@@ -1,6 +1,6 @@
 'use strict';
 
-const inputNumber = document.querySelector('.form__input').value;
+const inputNumber = document.querySelector('.form__input');
 const button = document.querySelector('.form__button');
 const clue = document.querySelector('.text__clue');
 const textCounter = document.querySelector('.text__counter');
@@ -21,23 +21,41 @@ button.addEventListener('click', getRandomNumber);
 
 function compareNumbers () {
     console.log('llamando');
-    if (inputNumber < randomNumber) {
-        clue.innerHTML = "El número es demasiado bajo.";
-    } 
-    else if (inputNumber > randomNumber) {
+    const inputNumberValue = parseInt(inputNumber.value);
+    
+    if (inputNumberValue > 100) {
+        console.log('El número debe estar entre 1 y 100');
+        return clue.innerHTML = "El número debe estar entre 1 y 100.";
+    }
+    else if (inputNumberValue < 1) {
+        console.log('El número debe estar entre 1 y 100');
+        return clue.innerHTML = "El número debe estar entre 1 y 100.";
+    }
+    else if (inputNumberValue > randomNumber) {
+        console.log('El número es demasiado alto');
         clue.innerHTML = "El número es demasiado alto.";
     }
-    else if (inputNumber < 1) {
-        clue.innerHTML = "El número debe estar entre 1 y 100.";
+    else if (inputNumberValue < randomNumber) {
+        console.log('El número es demasiado bajo');
+        clue.innerHTML = "El número es demasiado bajo.";
     }
-    else if (inputNumber > 100) {
-        clue.innerHTML = "El número debe estar entre 1 y 100.";
-    }
-    else {
+    else  if (inputNumberValue === randomNumber){
         clue.innerHTML = "¡¡¡Has ganado campeona!!!";
     }
 };
-
+/*if (userNumberValue > 100) {
+    console.log('El número debe estar entre 0 y 100.');
+    return tipMessage.innerHTML = 'El número debe estar entre 0 y 100.';
+} else if (userNumberValue === randomNumber) {
+    console.log('Has ganado');
+    return tipMessage.innerHTML = 'Has ganado campeona!!!';
+} else if (userNumberValue < randomNumber) {
+    console.log('Demasiado bajo.');
+    return tipMessage.innerHTML = `Demasiado bajo.`;
+} else if (userNumberValue > randomNumber) {
+    console.log('Demasiado alto.');
+    return tipMessage.innerHTML = `Demasiado alto.`;
+}*/
 button.addEventListener('click', compareNumbers);
 
 //Hago la función contador para que me indique el número de intentos 
