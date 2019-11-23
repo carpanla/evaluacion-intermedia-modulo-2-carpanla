@@ -31,6 +31,10 @@ function compareNumbers () {
         console.log('El número debe estar entre 1 y 100');
         return clue.innerHTML = "El número debe estar entre 1 y 100.";
     }
+    else if (inputNumberValue = '') {
+        console.log('El número debe estar entre 1 y 100');
+        return clue.innerHTML = "El número debe estar entre 1 y 100.";
+    }
     else if (inputNumberValue > randomNumber) {
         console.log('El número es demasiado alto');
         clue.innerHTML = "El número es demasiado alto.";
@@ -43,20 +47,17 @@ function compareNumbers () {
         clue.innerHTML = "¡¡¡Has ganado campeona!!!";
     }
 };
-/*if (userNumberValue > 100) {
-    console.log('El número debe estar entre 0 y 100.');
-    return tipMessage.innerHTML = 'El número debe estar entre 0 y 100.';
-} else if (userNumberValue === randomNumber) {
-    console.log('Has ganado');
-    return tipMessage.innerHTML = 'Has ganado campeona!!!';
-} else if (userNumberValue < randomNumber) {
-    console.log('Demasiado bajo.');
-    return tipMessage.innerHTML = `Demasiado bajo.`;
-} else if (userNumberValue > randomNumber) {
-    console.log('Demasiado alto.');
-    return tipMessage.innerHTML = `Demasiado alto.`;
-}*/
+
 button.addEventListener('click', compareNumbers);
+
+//Habilitar tecla enter
+
+document.onkeyup = function(event) {
+    event.preventDefault();
+    if (event.keyCode === 13) {
+    button.click();
+    }
+};
 
 //Hago la función contador para que me indique el número de intentos 
 
