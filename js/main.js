@@ -27,12 +27,12 @@ function compareNumbers() {
   const inputNumberValue = parseInt(inputNumber.value);
 
   if (inputNumberValue > 100) {
-    console.log('El número debe estar entre 1 y 100');
-    return clue.innerHTML = 'El número debe estar entre 1 y 100.';
+    console.log('¡Te has pasado! El número debe estar entre 1 y 100.');
+    return clue.innerHTML = '¡Te has pasado! El número debe estar entre 1 y 100.';
   }
   else if (inputNumberValue < 1) {
-    console.log('El número debe estar entre 1 y 100');
-    return clue.innerHTML = 'El número debe estar entre 1 y 100.';
+    console.log('¡Demasiado bajo! El número debe estar entre 1 y 100');
+    return clue.innerHTML = '¡Demasiado bajo! El número debe estar entre 1 y 100.';
   }
   else if (inputNumberValue > randomNumber) {
     console.log('El número es demasiado alto');
