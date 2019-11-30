@@ -9,13 +9,15 @@
 </head>
 <body>
     <h1 class="title">Adivina el número</h1>
-    <form class="form" action="#">
-        <label class="label">Introduce aquí tu número:</label>
-        <input class="form__input" type="number" />
+    <form class="form" action="#" method="POST">
+        <label class="label" for="number">Introduce aquí tu número:</label>
+        <input class="form__input" type="number" id="number" />
         <input class="form__button" type="button" value="Prueba" />
+        <button class="reset" type="reset">Reset</button>
     </form>
     <p class="text__clue">Pista: Escribe el número y dale a Prueba</p>
     <p class="text__counter">Número de intentos: 0</p>
+    
     <script type="text/javascript" src="./js/main.js"></script>
 </body>
 </html>

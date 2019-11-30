@@ -1,10 +1,14 @@
 * {
+    margin: 0 auto;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     box-sizing: border-box;
 }
 
-
-
+.title{
+    color: mediumvioletred;
+    text-align: center;
+    margin-top: 50px;
+} 
 .form {
     display: flex;
     flex-direction: column;
@@ -12,20 +16,33 @@
 }
 .label {
     padding: 5px;
+    color: blueviolet;
 }
 .form__input {
     margin: 5px;
+    border-radius: 10px;
+    height: 35px;
 }
 .form__button {
     margin: 5px;
-    background-color: goldenrod;
+    background-color: lightgreen;
     border-radius: 10px;
+    height: 35px;
 }
-
+.reset {
+    margin: 5px;
+    background-color: lightcoral;
+    border-radius: 10px;
+    height: 35px;
+}
 .text__clue {
     padding-top: 10px;
     margin: 5px;
+    color: blueviolet;
+    text-align: center;
 }
 .text__counter {
     margin: 5px;
+    color: blueviolet;
+    text-align: center;
 }
